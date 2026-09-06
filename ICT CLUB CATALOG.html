@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICT Club | Tech-a-Look Booth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ICT CLUB CATALOG.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="brand" href="#top"
+        ><img class="logo" src="ICT CLUB LOGO.jpg" alt="ICT Club logo" /><span
+          >TECH-A-LOOK</span
+        ></a
+      >
+      <div class="links">
+        <a href="#catalogue">Catalogue</a><a href="#about">About the club</a>
+      </div>
+      <button class="cart" id="cartButton">
+        Basket <span id="cartCount">0</span>
+      </button>
+    </nav>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-inner reveal">
+          <span class="eyebrow">ICT Club presents</span>
+          <h1>Play bold.<br />Take home a little magic.</h1>
+          <p>
+            Discover handmade club creations, quick-fire challenges, and prizes
+            made to turn a school booth visit into a story worth sharing.
+          </p>
+          <button
+            class="hero-cta"
+            onclick="document.querySelector('#catalogue').scrollIntoView()"
+          >
+            Explore the booth ↓
+          </button>
+        </div>
+      </section>
+      <section class="wrap" id="catalogue">
+        <div class="section-head">
+          <div>
+            <h2>What’s on the table</h2>
+            <p>Pick a challenge, find a keepsake, make it yours.</p>
+          </div>
+          <span class="eyebrow" style="color: var(--violet)"
+            >07 items available</span
+          >
+        </div>
+        <div class="tools">
+          <div class="filters">
+            <button class="filter active" data-filter="all">All</button
+            ><button class="filter" data-filter="game">Games</button
+            ><button class="filter" data-filter="product">Handmade</button>
+          </div>
+          <input
+            class="search"
+            id="search"
+            type="search"
+            placeholder="Search the catalogue..."
+            aria-label="Search the catalogue"
+          />
+        </div>
+        <div class="grid" id="productGrid">
+          <article
+            class="card reveal"
+            data-type="game"
+            data-name="Basketball Shoot"
+          >
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=85"
+                alt="Basketball on a court"
+              /><span class="tag">Game</span>
+            </div>
+            <div class="card-body">
+              <h3>Basketball Shoot</h3>
+              <p>Three shots. One big chance. Can you land the grand prize?</p>
+              <div class="card-foot">
+                <span class="price">$15 / 3 shots</span>
+                <div class="actions">
+                  <button
+                    class="details"
+                    data-title="Basketball Shoot"
+                    data-info="Shoot the ball through the basket to win. Three shots unlock the grand prize: a certificate and keychain."
+                  >
+                    Details</button
+                  ><button class="add">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card reveal" data-type="game" data-name="iShoot Mo">
+            <div class="card-image">
+              <img
+                src="https://www.wikihow.com/images/thumb/3/32/Boom-Cup-Step-4.jpg/v4-460px-Boom-Cup-Step-4.jpg"
+                alt="Colorful party game decorations"
+              /><span class="tag">Game</span>
+            </div>
+            <div class="card-body">
+              <h3>iShoot Mo!</h3>
+              <p>Bounce ping-pong balls into cups to unlock a random prize.</p>
+              <div class="card-foot">
+                <span class="price">$10 / 2 balls</span>
+                <div class="actions">
+                  <button
+                    class="details"
+                    data-title="iShoot Mo!"
+                    data-info="Bounce the ping-pong balls from the table into paper cups. Every cup holds a different surprise."
+                  >
+                    Details</button
+                  ><button class="add">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="card reveal"
+            data-type="game"
+            data-name="Target the Cups"
+          >
+            <div class="card-image">
+              <img
+                src="https://thumbs.dreamstime.com/b/pyramid-red-disposable-paper-cups-mounted-symbolizing-success-balance-stability-front-blue-summer-sky-white-310938535.jpg"
+                alt="Colorful cups for a target game"
+              /><span class="tag">Game</span>
+            </div>
+            <div class="card-body">
+              <h3>Target the Cups</h3>
+              <p>Knock down the pyramid with three balls and steady aim.</p>
+              <div class="card-foot">
+                <span class="price">$15 / 3 balls</span>
+                <div class="actions">
+                  <button
+                    class="details"
+                    data-title="Target the Cups"
+                    data-info="Aim for the pyramid in front and knock it down. Simple as solving a bug in your code, we promise."
+                  >
+                    Details</button
+                  ><button class="add">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="card reveal"
+            data-type="product"
+            data-name="Button Pins"
+          >
+            <div class="card-image">
+              <img
+                src="https://m.media-amazon.com/images/I/71GEc%2BuXpXL.jpg"
+                alt="Colorful enamel pins"
+              /><span class="tag">Handmade</span>
+            </div>
+            <div class="card-body">
+              <h3>Button Pins</h3>
+              <p>
+                A tiny badge of club spirit for your bag, lanyard, or jacket.
+              </p>
+              <div class="card-foot">
+                <span class="price">$15</span>
+                <div class="actions">
+                  <button
+                    class="details"
+                    data-title="Button Pins"
+                    data-info="A handmade button pin designed by the ICT Club team. Collect one to carry a little club spirit with you."
+                  >
+                    Details</button
+                  ><button class="add">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="card reveal"
+            data-type="product"
+            data-name="Fuzzy Clips"
+          >
+            <div class="card-image">
+              <img
+                src="https://i.pinimg.com/originals/10/89/ec/1089ec8c456486771ee223cfa9a04f26.jpg"
+                alt="Colorful craft accessories"
+              /><span class="tag">Handmade</span>
+            </div>
+            <div class="card-body">
+              <h3>Fuzzy Clips</h3>
+              <p>
+                Soft, playful clips that add color to your notes and school bag.
+              </p>
+              <div class="card-foot">
+                <span class="price">$10 / 1 pc</span>
+                <div class="actions">
+                  <button
+                    class="details"
+                    data-title="Fuzzy Clips"
+                    data-info="Pick one fuzzy clip for $10 or a pair for $15. Each one is assembled by our club members."
+                  >
+                    Details</button
+                  ><button class="add">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="card reveal"
+            data-type="product"
+            data-name="Keychain Beads"
+          >
+            <div class="card-image">
+              <img
+                src="https://thehomesihavemade.com/wp-content/uploads/2024/01/DIY-Bead-Keychains_25-700x700.jpg"
+                alt="Colorful beaded accessories"
+              /><span class="tag">Handmade</span>
+            </div>
+            <div class="card-body">
+              <h3>Keychain Beads</h3>
+              <p>A bright custom charm to make your keys unmistakably yours.</p>
+              <div class="card-foot">
+                <span class="price">$25 normal</span>
+                <div class="actions">
+                  <button
+                    class="details"
+                    data-title="Keychain Beads"
+                    data-info="Choose a normal keychain for $25 or ask for a custom color combination for $30."
+                  >
+                    Details</button
+                  ><button class="add">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="card reveal"
+            data-type="product"
+            data-name="Anonymous Message"
+          >
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=85"
+                alt="Writing a note on paper"
+              /><span class="tag">Secret note</span>
+            </div>
+            <div class="card-body">
+              <h3>Anonymous Message</h3>
+              <p>Send a thoughtful note with free delivery around the booth.</p>
+              <div class="card-foot">
+                <span class="price">$10 / message</span>
+                <div class="actions">
+                  <button
+                    class="details"
+                    data-title="Anonymous Message"
+                    data-info="Write a message, leave your name out, and we will deliver it discreetly. Free delivery included."
+                  >
+                    Details</button
+                  ><button class="add">Add</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="banner" id="about">
+          <div>
+            <h2>Made by the ICT Club</h2>
+            <p>
+              Connect. Learn. Innovate. Every purchase supports our student-led
+              club.
+            </p>
+          </div>
+          <button
+            class="add"
+            onclick="alert('Come visit the ICT Club booth and say hello!')"
+          >
+            Say hello →
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <strong>ICT CLUB · TECH-A-LOOK BOOTH</strong>
+      <p>
+        Information and Communication Technology · Connect · Learn · Innovate
+      </p>
+    </footer>
+    <dialog id="detailsDialog">
+      <div class="dialog-inner">
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogInfo"></p>
+        <button class="close" onclick="detailsDialog.close()">Close</button>
+      </div>
+    </dialog>
+    <script src="ICT CLUB CATALOG.js"></script>
+  </body>
+</html>
